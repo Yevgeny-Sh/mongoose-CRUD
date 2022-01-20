@@ -4,12 +4,12 @@ const validator = require("validator");
 const Product = mongoose.model("Product", {
   name: {
     type: String,
-    //required: true,
-    //unique: true,
+    required: true,
+    unique: true,
   },
   category: {
     type: String,
-    //required: true,
+    required: true,
   },
   isActive: {
     type: Boolean,
@@ -17,12 +17,12 @@ const Product = mongoose.model("Product", {
   details: {
     description: {
       type: String,
-      //required: true,
+      required: true,
       minLength: [10, "Must be at least 10 chars"],
     },
     price: {
       type: Number,
-      //required: true,
+      required: true,
       min: 0,
     },
     discount: {
@@ -31,12 +31,12 @@ const Product = mongoose.model("Product", {
     },
     images: {
       type: Array,
-      //required: true,
+      required: true,
       minlength: 2,
     },
     phone: {
       type: String,
-      //  required: true,
+      required: true,
       validate(value) {
         if (!validator.isMobilePhone(value, "he-IL")) {
           throw Error("must be a israeli mobile phone");

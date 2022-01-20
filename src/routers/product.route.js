@@ -93,7 +93,8 @@ router.put("/products/:id", async (req, res) => {
     // "details.decription",
     // "details.price",
     "details.discount",
-    // "details.imgs",
+    // "details.images",
+    // "details.phone",
   ];
   const isValidOperation = updates.every((update) =>
     allowedUpdates.includes(update)
@@ -117,14 +118,14 @@ router.put("/products/:id", async (req, res) => {
 });
 
 // const jsonProduct = {
-//     "name": "watermelon",
-//        "isActive":"true",
-//     "category": "fruit",
-//     "details": {
-//       "description": "lemonsssssssssss",
-//       "price": 25,
-//       "images": ["fgdfg", "sdfg"],
-//       "phone": "0501234547"
-//     }
-//   }
+//   "name": "adfff",
+//   "isActive": "true",
+//   "category": "fruit",
+//   "details": {
+//     "description": "lemonsssssssssss",
+//     "price": "25",
+//     "images": ["fgdfg", "sdfg"],
+//     "phone": "0501234547",
+//   },
+// };
 module.exports = router;
